@@ -135,7 +135,8 @@
             "icon": "gtp:blockspace-chain-overview",
             "key": "chain-overview",
             "rootKey": "chainOverview",
-            "urlKey": "chain-overview"
+            "urlKey": "chain-overview",
+            "coords" : [760, 310, 2075, 950] 
           },
           {
             "label": "Category Comparison",
@@ -147,7 +148,8 @@
             "icon": "gtp:blockspace-category-comparison",
             "key": "category-comparison",
             "rootKey": "categoryComparison",
-            "urlKey": "category-comparison"
+            "urlKey": "category-comparison",
+            "coords" : [765, 315, 2070, 940] 
           }
         ]
       },
@@ -165,7 +167,8 @@
             "icon": "gtp:ethereum-logo-monochrome",
             "key": "ethereum",
             "rootKey": "chainsEthereum",
-            "urlKey": "ethereum"
+            "urlKey": "ethereum",
+            "coords": [765, 345, 2070, 730] 
           },
           {
             "label": "Base",
@@ -176,7 +179,8 @@
             "icon": "gtp:base-logo-monochrome",
             "key": "base",
             "rootKey": "chainsBase",
-            "urlKey": "base"
+            "urlKey": "base",
+            "coords": [765, 320, 2070, 710] 
           },
           {
             "label": "OP Mainnet",
@@ -187,7 +191,8 @@
             "icon": "gtp:optimism-logo-monochrome",
             "key": "optimism",
             "rootKey": "chainsOptimism",
-            "urlKey": "optimism"
+            "urlKey": "optimism",
+            "coords": [765, 365, 2070, 755] 
           },
           {
             "label": "Public Goods Network",
@@ -198,7 +203,8 @@
             "icon": "gtp:public-goods-network-logo-monochrome",
             "key": "gitcoin_pgn",
             "rootKey": "chainsOptimism",
-            "urlKey": "public-goods-network"
+            "urlKey": "public-goods-network",
+            "coords": [765, 320, 2070, 710] 
           },
           {
             "label": "Zora",
@@ -209,7 +215,8 @@
             "icon": "gtp:zora-logo-monochrome",
             "key": "zora",
             "rootKey": "chainsOptimism",
-            "urlKey": "zora"
+            "urlKey": "zora",
+            "coords": [765, 320, 2070, 710] 
           },
           {
             "label": "Arbitrum",
@@ -220,7 +227,8 @@
             "icon": "gtp:arbitrum-logo-monochrome",
             "key": "arbitrum",
             "rootKey": "chainsArbitrum",
-            "urlKey": "arbitrum"
+            "urlKey": "arbitrum",
+            "coords": [765, 345, 2070, 730] 
           },
           {
             "label": "Polygon zkEVM",
@@ -231,7 +239,8 @@
             "icon": "gtp:polygon-zkevm-logo-monochrome",
             "key": "polygon_zkevm",
             "rootKey": "chainsPolygon",
-            "urlKey": "polygon-zkevm"
+            "urlKey": "polygon-zkevm",
+            "coords": [765, 365, 2070, 755]
           },
           {
             "label": "zkSync Era",
@@ -242,7 +251,8 @@
             "icon": "gtp:zksync-era-logo-monochrome",
             "key": "zksync_era",
             "rootKey": "chainsOptimism",
-            "urlKey": "zksync-era"
+            "urlKey": "zksync-era",
+            "coords": [765, 345, 2070, 730] 
           },
           {
             "label": "Linea",
@@ -253,7 +263,8 @@
             "icon": "gtp:linea-logo-monochrome",
             "key": "linea",
             "rootKey": "chainsLinea",
-            "urlKey": "linea"
+            "urlKey": "linea",
+            "coords": [765, 345, 2070, 730] 
           },
           {
             "label": "Immutable X",
@@ -264,7 +275,8 @@
             "icon": "gtp:immutable-x-logo-monochrome",
             "key": "imx",
             "rootKey": "chainsImmutableX",
-            "urlKey": "immutable-x"
+            "urlKey": "immutable-x",
+            "coords": [765, 345, 2070, 730] 
           }
         ]
       }
