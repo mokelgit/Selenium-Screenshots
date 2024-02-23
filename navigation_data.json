@@ -2,281 +2,120 @@
     "Fundamentals": {
       "label": "Fundamentals",
       "key": "metrics",
-      "icon": "gtp:fundamentals",
       "options": [
         {
           "label": "Daily Active Addresses",
-          "category": "activity",
-          "page": {
-            "title": "Daily Active Addresses",
-            "description": "The number of unique daily addresses that interacted with a chain.",
-            "why": "Daily active addresses is a widely used metric for estimating the number of users on a blockchain network...",
-            "icon": "feather:sunrise"
-          },
-          "icon": "feather:sunrise",
-          "key": "daa",
-          "rootKey": "metricsDailyActiveAddresses",
           "urlKey": "daily-active-addresses"
         },
         {
           "label": "Transaction Count",
-          "category": "activity",
-          "page": {
-            "title": "Transaction Count",
-            "description": "The number of daily transactions. We try to only count transactions that are executed by users/smart contracts - no system transactions.",
-            "why": "The number of transactions processed on a blockchain is a reliable metric for measuring its usage. However, it should be noted that this metric alone may not provide sufficient insight into the actual value of the transactions being conducted...",
-            "icon": "feather:clock"
-          },
-          "icon": "feather:clock",
-          "key": "txcount",
-          "rootKey": "metricsTxCount",
           "urlKey": "transaction-count"
         },
         {
           "label": "Stablecoin Market Cap",
-          "category": "value-locked",
-          "page": {
-            "title": "Stablecoin Market Cap",
-            "description": "The sum of stablecoins that are locked on the chain.",
-            "why": "Stablecoin market cap is a crucial metric for evaluating the growth and development of a blockchain's decentralized finance (DeFi) ecosystem.Stables are a popular choice for use in DeFi applications such as lending, borrowing, and trading. The market cap of stablecoins on a particular chain can provide valuable insights into the level of adoption and usage of DeFi applications on the network...",
-            "icon": "feather:dollar-sign"
-          },
-          "icon": "feather:dollar-sign",
-          "key": "stables_mcap",
-          "rootKey": "metricsStablesMcap",
           "urlKey": "stablecoin-market-cap"
         },
         {
           "label": "Total Value Locked",
-          "category": "value-locked",
-          "page": {
-            "title": "Total Value Locked",
-            "description": "The sum of all funds locked on the chain. Methodology and data is derived from L2Beat.com.",
-            "why": "TVL is a crucial metric for assessing the success of a blockchain. A high TVL indicates that users have significant trust in the chain's security and reliability, as well as confidence in the usefulness and functionality of the various applications available on the chain...",
-            "icon": "feather:star"
-          },
-          "icon": "feather:star",
-          "key": "tvl",
-          "rootKey": "metricsTvl",
           "urlKey": "total-value-locked"
         },
         {
           "label": "Fees Paid by Users",
-          "category": "economics",
-          "page": {
-            "title": "Fees Paid by Users",
-            "description": "The sum of fees that were paid by users of the chain in gas fees or, in the case of chains like Immutable X,  the amount of fees that were paid to the protocol wallet.",
-            "why": "Fees paid by users is a critical metric for measuring a blockchain's adoption and revenue generation. A high fee revenue can be an indication that users find the chain's applications and security valuable, and are willing to pay for it...",
-            "icon": "feather:credit-card"
-          },
-          "icon": "feather:credit-card",
-          "key": "fees",
-          "rootKey": "metricsFeesPaidToEthereum",
           "urlKey": "fees-paid-by-users"
         },
         {
           "label": "Rent Paid to L1",
-          "category": "economics",
-          "page": {
-            "title": "Rent Paid to L1",
-            "description": "The gas fees paid by L2s to post transaction data & verification states onto Ethereum.",
-            "why": "Rent paid to L1 quantifies the expenses associated with posting L2 transaction data and proofs onto the Ethereum blockchain. The term 'rent' signifies the gas fees L2s incur to leverage the security of the Ethereum blockchain. This metric provides valuable insights into the value accrual for ETH holders...",
-            "icon": "feather:credit-card"
-          },
-          "icon": "feather:credit-card",
-          "key": "rent_paid",
-          "rootKey": "metricsRentPaid",
           "urlKey": "rent-paid"
         },
         {
           "label": "Onchain Profit",
-          "category": "economics",
-          "page": {
-            "title": "Onchain Profit",
-            "description": "The net profit of L2s, accounting for revenues as L2 gas fees collected and expenses as posting transaction data & verification states onto Ethereum.",
-            "why": "Onchain Profit is a key metric for assessing the financial viability of scaling solutions. It quantifies profitability by comparing the revenue generated from L2 gas fees collected to the costs associated with data & proof posting onto the Ethereum blockchain...",
-            "icon": "feather:credit-card"
-          },
-          "icon": "feather:credit-card",
-          "key": "profit",
-          "rootKey": "metricsEarnings",
           "urlKey": "profit"
         },
         {
+          "label": "Fully Diluted Valuation",
+          "urlKey": "fdv",
+          "coords": [1320, 370, 2075, 790]
+        },
+        {
+          "label": "Market Cap",
+          "urlKey": "market-cap",
+          "coords": [1320, 370, 2075, 790]
+        },
+        
+        {
           "label": "Transaction Costs",
-          "category": "convenience",
-          "page": {
-            "title": "Transaction Costs",
-            "description": "The median amount that is paid per transaction.",
-            "note": "1 Billion Gwei equals 1 ETH.",
-            "why": "This is the amount that users pay per transaction. On EVM chains, transaction costs depend on the complexity of the transaction (which is measured in gas). A simple transaction, e.g. a native ETH transfer, uses less gas than a more complex transaction, e.g. an ERC20 swap. Hence, we calculated this metric by looking at the median transaction costs. IMX doesn't charge transaction costs...",
-            "icon": "gtp:transaction-costs",
-            "showGwei": true,
-            "reversePerformer": true
-          },
-          "icon": "gtp:transaction-costs",
-          "key": "txcosts",
-          "rootKey": "metricsTxCosts",
           "urlKey": "transaction-costs"
         }
       ]
     },
     "Blockspace": {
-        "label": "Blockspace",
-        "icon": "gtp:package",
+        "label": "Blockspace", 
         "options": [
           {
             "label": "Chain Overview",
-            "page": {
-              "title": "Chain Overview",
-              "description": "We measure the gas fees spent and the number of transactions sent to smart contracts. We then map these smart contracts to distinct categories. The chart below breaks down the total blockspace of a chain into these categories. Each category is made up of multiple subcategories, which are listed in the mapping table below the chart. Toggling between the \"Absolute\" and \"Share of Chain Usage\" options shows either the absolute amount of gas fees/transactions, or the share of the chain's total blockspace.",
-              "icon": "gtp:blockspace-chain-overview"
-            },
-            "icon": "gtp:blockspace-chain-overview",
-            "key": "chain-overview",
-            "rootKey": "chainOverview",
             "urlKey": "chain-overview",
-            "coords" : [760, 310, 2075, 950] 
+            "coords" : [760, 310, 2075, 1030] 
           },
           {
             "label": "Category Comparison",
-            "page": {
-              "title": "Category Comparison",
-              "description": "How are certain blockspace categories used on different chains? Explore the varied applications of blockspace categories across Ethereum Layer-2s.",
-              "icon": "gtp:blockspace-category-comparison"
-            },
-            "icon": "gtp:blockspace-category-comparison",
-            "key": "category-comparison",
-            "rootKey": "categoryComparison",
             "urlKey": "category-comparison",
-            "coords" : [765, 315, 2070, 940] 
+            "coords" : [765, 315, 2070, 1020] 
           }
         ]
       },
       "Chains": {
         "label": "Single Chain",
         "key": "chains",
-        "icon": "gtp:link",
         "options": [
           {
             "label": "Ethereum",
-            "category": "layer-1",
-            "page": {
-              "description": "Ethereum serves as the base layer (Layer 1 or L1) for various Layer 2 (L2) scaling solutions, which aim to improve transaction throughput and reduce costs. As the foundational layer, Ethereum anchors these L2 networks, ensuring they inherit its robust security and trustlessness."
-            },
-            "icon": "gtp:ethereum-logo-monochrome",
-            "key": "ethereum",
-            "rootKey": "chainsEthereum",
             "urlKey": "ethereum",
-            "coords": [765, 345, 2070, 730] 
+            "coords": [765, 320, 2070, 705] 
           },
           {
             "label": "Base",
-            "category": "opstack",
-            "page": {
-              "description": "Base is a fully EVM compatible optimistic rollup built on the OP Stack. It is incubated inside of Coinbase. Public mainnet launch was on August 9th, 2023."
-            },
-            "icon": "gtp:base-logo-monochrome",
-            "key": "base",
-            "rootKey": "chainsBase",
             "urlKey": "base",
-            "coords": [765, 320, 2070, 710] 
+            "coords": [765, 290, 2070, 680] 
           },
           {
             "label": "OP Mainnet",
-            "category": "opstack",
-            "page": {
-              "description": "OP Mainnet (formerly Optimism) uses an optimistic rollup approach, where transactions are assumed to be valid unless proven otherwise, and only invalid transactions are rolled back. OP Mainnet launched in August 2021, making it one of the first rollups. It is fully compatible with the Ethereum Virtual Machine (EVM), making it easy for developers to migrate their applications to the OP Mainnet network."
-            },
-            "icon": "gtp:optimism-logo-monochrome",
-            "key": "optimism",
-            "rootKey": "chainsOptimism",
             "urlKey": "optimism",
-            "coords": [765, 365, 2070, 755] 
+            "coords": [765, 340, 2070, 730] 
           },
           {
             "label": "Public Goods Network",
-            "category": "opstack",
-            "page": {
-              "description": "Public Goods Network is a fully EVM compatible optimistic rollup built on the OP Stack. Public launch was in July 2023."
-            },
-            "icon": "gtp:public-goods-network-logo-monochrome",
-            "key": "gitcoin_pgn",
-            "rootKey": "chainsOptimism",
             "urlKey": "public-goods-network",
-            "coords": [765, 320, 2070, 710] 
+            "coords": [765, 290, 2070, 680] 
           },
           {
             "label": "Zora",
-            "category": "opstack",
-            "page": {
-              "description": "Zora is a fully EVM compatible optimistic rollup built on the OP Stack. Public launch was in June 2023."
-            },
-            "icon": "gtp:zora-logo-monochrome",
-            "key": "zora",
-            "rootKey": "chainsOptimism",
             "urlKey": "zora",
-            "coords": [765, 320, 2070, 710] 
+            "coords": [765, 290, 2070, 680] 
           },
           {
             "label": "Arbitrum",
-            "category": "other-optimistic",
-            "page": {
-              "description": "Arbitrum One is developed by Offchain Labs and its mainnet launched in September 2021. It uses an optimistic rollup approach and is fully compatible with the Ethereum Virtual Machine (EVM), making it developer-friendly."
-            },
-            "icon": "gtp:arbitrum-logo-monochrome",
-            "key": "arbitrum",
-            "rootKey": "chainsArbitrum",
             "urlKey": "arbitrum",
-            "coords": [765, 345, 2070, 730] 
+            "coords": [765, 315, 2070, 710] 
           },
           {
             "label": "Polygon zkEVM",
-            "category": "zk-rollup",
-            "page": {
-              "description": "Polygon zkEVM uses zero-knowledge proofs to enable faster and cheaper transactions. It allows users to build and run EVM-compatible smart contracts, achieving up to 100x lower gas fees and up to 2,000x faster transaction speeds than the Ethereum mainnet. It's fully compatible with the Ethereum Virtual Machine, making it easy for developers to migrate their applications to the Polygon network. It launched in March 2023."
-            },
-            "icon": "gtp:polygon-zkevm-logo-monochrome",
-            "key": "polygon_zkevm",
-            "rootKey": "chainsPolygon",
             "urlKey": "polygon-zkevm",
-            "coords": [765, 365, 2070, 755]
+            "coords": [765, 340, 2070, 730]
           },
           {
             "label": "zkSync Era",
-            "category": "zk-rollup",
-            "page": {
-              "description": "zkSync Era is a Layer 2 protocol that scales Ethereum with cutting-edge ZK tech. Their mission isn't to merely increase Ethereum's throughput, but to fully preserve its foundational values – freedom, self-sovereignty, decentralization – at scale."
-            },
-            "icon": "gtp:zksync-era-logo-monochrome",
-            "key": "zksync_era",
-            "rootKey": "chainsOptimism",
             "urlKey": "zksync-era",
-            "coords": [765, 345, 2070, 730] 
+            "coords": [765, 320, 2070, 705] 
           },
           {
             "label": "Linea",
-            "category": "zk-rollup",
-            "page": {
-              "description": "Linea is a developer-friendly ZK Rollup, marked as the next stage of ConsenSys zkEVM, which aims to enhance the Ethereum network by facilitating a new wave of decentralized applications. Public launch was in July 2023."
-            },
-            "icon": "gtp:linea-logo-monochrome",
-            "key": "linea",
-            "rootKey": "chainsLinea",
             "urlKey": "linea",
-            "coords": [765, 345, 2070, 730] 
+            "coords": [765, 320, 2070, 705] 
           },
           {
             "label": "Immutable X",
-            "category": "validium",
-            "page": {
-              "description": "Immutable X is an optimized game-specific zk rollup. It is designed to mint, transfer, and trade tokens and NFTs at higher volumes and zero gas fees. It is not EVM compatible but its easy-to-use APIs and SDKs aim to make development for game devs as easy as possible. It launched in April 2021."
-            },
-            "icon": "gtp:immutable-x-logo-monochrome",
-            "key": "imx",
-            "rootKey": "chainsImmutableX",
             "urlKey": "immutable-x",
-            "coords": [765, 345, 2070, 730] 
+            "coords": [765, 320, 2070, 705] 
           }
         ]
       }

@@ -6,7 +6,7 @@ import os
 import json
 
 FUND_CAPTURE = [1320, 350, 2075, 770]
-CHAIN_CAPTURE = [765, 345, 2070, 700] 
+CHAIN_CAPTURE = [765, 245, 2070, 600] 
 BLOCK_CAPTURE = [1320, 350, 2075, 770]
 #Default captures for each group
 # Coords order left, top, right, bottom
@@ -42,11 +42,11 @@ if __name__ == "__main__":
         data = json.load(file)
     #Generate folders for image if not existing
     
-    #for i in data['Fundamentals']["options"]:
-        #url = "https://www.growthepie.xyz/fundamentals/"
-        #url = url + "" + i["urlKey"]
-        #path = "Screenshots/" + "Fundamentals/" + i["urlKey"] + ".png"
-        #capture_screenshot(url, path, i["coords"] if "coords" in i else FUND_CAPTURE)
+    for i in data['Fundamentals']["options"]:
+        url = "https://www.growthepie.xyz/fundamentals/"
+        url = url + "" + i["urlKey"]
+        path = "Screenshots/" + "Fundamentals/" + i["urlKey"] + ".png"
+        capture_screenshot(url, path, i["coords"] if "coords" in i else FUND_CAPTURE)
 
         
     for i in data['Chains']["options"]:
@@ -55,11 +55,11 @@ if __name__ == "__main__":
         path = "Screenshots/" + "Chains/" + i["urlKey"] + ".png"
         capture_screenshot(url, path, i["coords"] if "coords" in i else CHAIN_CAPTURE)
         
-    #for i in data['Blockspace']["options"]:
-        #url = "https://www.growthepie.xyz/blockspace/"
-        #url = url + "" + i["urlKey"]
-        #path = "Screenshots/" + "Blockspace/" + i["urlKey"] + ".png"
-        #capture_screenshot(url, path, i["coords"] if "coords" in i else BLOCK_CAPTURE)
+    for i in data['Blockspace']["options"]:
+        url = "https://www.growthepie.xyz/blockspace/"
+        url = url + "" + i["urlKey"]
+        path = "Screenshots/" + "Blockspace/" + i["urlKey"] + ".png"
+        capture_screenshot(url, path, i["coords"] if "coords" in i else BLOCK_CAPTURE)
     #Capture screenshot loop for each image group
         
    
